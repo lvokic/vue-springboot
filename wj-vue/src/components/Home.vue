@@ -1,20 +1,25 @@
 <template>
+  <body>
     <div>
-      <nav-menu></nav-menu>
-      <router-view/>
+      <nav-menu />
+      <router-view />
     </div>
-  </template>
+  </body>
+</template>
   
-  <script>
-    import NavMenu from './common/NavMenu'
-    export default {
-      name: 'Home',
-      components: {NavMenu}
-    }
-  </script>
-  
-  <style scoped>
-  
-  </style>
+<script>
+import NavMenu from './common/NavMenu'
+export default {
+  name: 'Home',
+  components: { NavMenu }
+}
+</script>
+ 
+<style scoped>
+  body {
+    margin: 0px;
+    padding: 0px;
+  }
+</style>
   
   

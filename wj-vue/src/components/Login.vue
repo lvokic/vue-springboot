@@ -15,7 +15,7 @@
         </el-form>
     </body>
 </template>
-  
+ 
 <script>
 export default {
     name: 'Login',
@@ -53,7 +53,7 @@ export default {
   
 <style>
 #poster {
-    background:url("../assets/eva.png") no-repeat;
+    background:url("../assets/bg.jpeg") no-repeat;
     background-position: center;
     height: 100%;
     width: 100%;

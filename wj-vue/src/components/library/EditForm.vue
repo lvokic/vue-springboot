@@ -46,7 +46,7 @@
     </div>
   </template>
   
-  <script>
+ <script>
     export default {
       name: 'EditForm',
       data () {
@@ -65,7 +65,7 @@
               name: ''
             }
           },
-          formLabelWidth: '120px'
+          formLabelWidth: '100px'
         }
       },
       methods: {
@@ -105,10 +105,11 @@
  
   <style scoped>
     .el-icon-circle-plus-outline {
-      margin: 50px 0 0 20px;
-      font-size: 100px;
+      margin: 600px 0 0 -110px;
+      font-size: 50px;
       float: left;
       cursor: pointer;
+      color: #3377aa;
     }
   </style>
   
