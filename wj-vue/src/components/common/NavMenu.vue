@@ -5,13 +5,12 @@
       <el-menu-item v-for="(item, i) in navList" :key="i" :index="item.name">
         {{ item.navItem }}
       </el-menu-item>
-      <a href="#nowhere" style="color: whitesmoke;float: right;padding: 20px;">更多功能</a>
-      <span style="position: absolute;padding-top: 20px;right: 43%;font-size: 20px;font-weight: bold">White Jotter - Your
-        Mind Palace</span>
+      <a href="#nowhere" style="color: whitesmoke;float: right;padding: 20px;">Else</a>
+      <span style="position: absolute;padding-top: 20px;right: 43%;font-size: 20px;font-weight: bold">用户数据</Title></span>
     </el-menu>
   </body>
 </template>
-
+ 
 <script>
 export default {
   beforeRouteEnter(to, from, next) {
@@ -26,8 +25,8 @@ export default {
       navList: [
         { name: '/index', navItem: '首页' },
         { name: '/jotter', navItem: '笔记本' },
-        { name: '/library', navItem: '图书馆' },
-        { name: '/admin', navItem: '个人中心' }
+        { name: '/library', navItem: '数据库' },
+        { name: '/admin', navItem: 'Query' }
       ]
     }
   }

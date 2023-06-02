@@ -1,7 +1,7 @@
 <template>
     <el-menu class="categories" default-active="0" @select="handleSelect" active-text-color="#ffd04b" text-color="white"
         background-color="transparent" style="border: 0px;">
-        <el-menu-item index="0">
+        <!-- <el-menu-item index="0">
             <i class="el-icon-menu"></i>
             <span slot="title">全部</span>
         </el-menu-item>
@@ -27,8 +27,8 @@
         </el-menu-item>
         <el-menu-item index="6">
             <i class="el-icon-menu"></i>
-            <span slot="title">科技</span>
-        </el-menu-item>
+            <span slot="title">科技</span> -->
+        <!-- </el-menu-item> -->
     </el-menu>
 </template>
 
