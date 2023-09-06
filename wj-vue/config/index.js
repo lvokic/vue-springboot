@@ -10,12 +10,20 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+    // 用于与spring-boot或者flask通信
     proxyTable: {
       '/api': {
         target: 'http://localhost:8443',
         changeOrigin: true,
         pathRewrite: {
           '^/api': ''
+        }
+      },
+      '/api-flask': {
+        target: 'http://127.0.0.1:5000',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api-flask': ''
         }
       }
     },

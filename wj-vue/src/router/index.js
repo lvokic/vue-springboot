@@ -5,6 +5,8 @@ import AppIndex from '@/components/home/AppIndex'
 import Login from '@/components/Login'
 import Home from '@/components/Home'
 import LibraryIndex from '@/components/library/LibraryIndex'
+import TestIndex from '../components/test/TestIndex'
+import FlaskIndex from '../components/flask/FlaskIndex'
 
 Vue.use(Router)
 
@@ -34,7 +36,23 @@ export default new Router({
           meta: {
             requireAuth: true
           }
-        }
+        },
+        {
+          path: '/test',
+          name: 'Test',
+          component: TestIndex,
+          meta: {
+            requireAuth: true
+          }
+        },
+        {
+          path: '/flask',
+          name: 'Flask',
+          component: FlaskIndex,
+          meta: {
+            requireAuth: true
+          }
+        },
       ]
     },
     {
