@@ -1,35 +1,39 @@
 <template>
   <el-container>
     <el-main>
-      <div class="flask-area">
-        <flask></flask>
-      </div>
-      <div class="upload-area">
-        <upload></upload>
+      <div class="upload-download-container">
+        <div class="dectect-area">
+          <detect></detect>
+        </div>
       </div>
     </el-main>
   </el-container>
 </template>
 
 <script>
-import Flask from './Flask.vue';
 import Upload from './Upload.vue';
+import Download from './Download.vue';
+import Detect from './Detect.vue';
 
 export default {
-  beforeRouteEnter(to, from, next) {
-    // 添加背景色 margin:0;padding:0是为了解决vue四周有白边的问题
-    document.querySelector('body').setAttribute('style', 'margin:0;padding:0');
-    next();
-  },
   name: 'AppFlask',
-  components: { Flask, Upload },
+  components: { Detect, Upload, Download },
 };
 </script>
 
 <style scoped>
-.flask-area,
-.upload-area {
-  width: 700px;
-  margin: 20px auto; /* 居中显示，上下外边距为 20px */
+.upload-download-container {
+  padding-top: 80px;
+  position: relative; /* 设置相对定位，以便子元素可以使用 z-index */
 }
+
+
+.upload-area,
+.download-area{
+  width: 100%; /* 使组件占据整个宽度 */
+  padding: 20px; /* 添加一些内边距 */
+  box-sizing: border-box; /* 内边距不会增加元素的实际宽度 */
+}
+
+
 </style>

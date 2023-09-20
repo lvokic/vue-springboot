@@ -12,8 +12,13 @@
     >
       <i class="el-icon-upload"></i>
       <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
-      <div class="el-upload__tip" slot="tip">只能上传jpg/png文件,且不超过500kb</div>
+      <div class="el-upload__tip" slot="tip">上传图片以进行检测</div>
     </el-upload>
+    
+    <!-- 上传成功后显示的图片 -->
+    <div v-if="uploadedImageUrl" class="uploaded-image">
+      <img :src="uploadedImageUrl" alt="Uploaded Image">
+    </div>
   </div>
 </template>
 
@@ -23,6 +28,7 @@ export default {
   data() {
     return {
       uploadUrl: 'http://127.0.0.1:5000/api-flask/upload/',
+      uploadedImageUrl: null, // 存储上传成功后的图片URL
     };
   },
   methods: {
@@ -30,6 +36,7 @@ export default {
       // 处理成功上传后的响应
       console.log(response);
       // 可以在这里更新Vue组件中的数据或者显示上传成功信息
+      this.uploadedImageUrl = response.url; // 保存上传成功的图片URL
     },
     handleError(error, file) {
       // 处理上传失败的情况
@@ -52,5 +59,13 @@ export default {
 <style scoped>
 .upload {
   margin-top: 10px;
+}
+
+.uploaded-image {
+  margin-top: 20px; /* 调整图片与上传区域的垂直间距 */
+}
+
+.uploaded-image img {
+  max-width: 100%; /* 图片宽度不超过父容器 */
 }
 </style>
