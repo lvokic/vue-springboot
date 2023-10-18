@@ -2,6 +2,9 @@
   <el-container>
     <el-main>
       <div class="upload-download-container">
+        <div class="upload-area">
+          <upload></upload>
+        </div>
         <div class="dectect-area">
           <detect></detect>
         </div>
