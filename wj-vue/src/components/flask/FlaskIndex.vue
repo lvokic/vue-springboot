@@ -2,6 +2,9 @@
   <el-container>
     <el-main>
       <div class="upload-download-container">
+        <div class="camera-area">
+          <camera></camera>
+        </div>
         <div class="upload-area">
           <upload></upload>
         </div>
@@ -17,10 +20,11 @@
 import Upload from './Upload.vue';
 import Download from './Download.vue';
 import Detect from './Detect.vue';
+import Camera from './Camera.vue';
 
 export default {
   name: 'AppFlask',
-  components: { Detect, Upload, Download },
+  components: { Camera, Detect, Upload, Download },
 };
 </script>
 
