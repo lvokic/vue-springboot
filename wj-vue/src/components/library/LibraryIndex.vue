@@ -20,7 +20,7 @@ export default {
     next()
   },
   name: 'AppLibrary',
-  components: { SideMenu, Books },
+  components: {Books },
   methods: {
     listByCategory() {
       var _this = this
