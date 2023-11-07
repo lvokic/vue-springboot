@@ -7,7 +7,8 @@ import Home from '@/components/Home'
 import LibraryIndex from '@/components/library/LibraryIndex'
 import TestIndex from '../components/test/TestIndex'
 import FlaskIndex from '../components/flask/FlaskIndex'
-
+import TempandHumi from '../components/home/TempandHumi.vue'
+import Light from '../components/home/Light.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -53,6 +54,22 @@ export default new Router({
             requireAuth: true
           }
         },
+        {
+          path:'/tempandhumi',
+          name:'TempandHumi',
+          component:TempandHumi,
+          meta: {
+            requireAuth: true
+          }
+        },
+        {
+          path:'/light',
+          name:'Light',
+          component:Light,
+          meta: {
+            requireAuth: true
+          }
+        }
       ]
     },
     {
@@ -60,5 +77,6 @@ export default new Router({
       name: 'Login',
       component: Login,
     }
+
   ]
 })
