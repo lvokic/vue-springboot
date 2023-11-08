@@ -26,8 +26,8 @@ export default {
         { name: '/index', navItem: '首页' },
         { name: '/flask', navItem: 'Flask' },
         { name: '/library', navItem: '数据库' },
-        { name: '/admin', navItem: 'Query' },
-        { name: '/test', navItem: '测试数据' }
+        // { name: '/admin', navItem: 'Query' },
+        // { name: '/test', navItem: '测试数据' }
       ]
     }
   }
@@ -36,7 +36,7 @@ export default {
 
 <style scoped>
 #poster {
-  background: url("../../assets/bg.jpeg");
+  background: url("../../assets/1.jpg");
   background-position: center;
   height: 100%;
   width: 100%;
