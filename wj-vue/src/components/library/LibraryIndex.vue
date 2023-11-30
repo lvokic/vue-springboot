@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <el-container>
     <el-aside style="width: 200px;margin-top: 20px;">
       <switch></switch>
@@ -44,4 +44,4 @@ export default {
 }
 </style>
   
-  
+   -->

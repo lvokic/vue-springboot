@@ -1,6 +1,6 @@
 <template>
     <div>
-      <img ref="videoPlayer" width="640" height="480">
+      <img ref="videoPlayer" width="800" height="480">
     </div>
   </template>
   
