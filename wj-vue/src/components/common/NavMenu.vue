@@ -1,61 +1,65 @@
 <template>
-  <body id="poster">
-    <el-menu :default-active="'/index'" router mode="horizontal" background-color="black" text-color="white"
-      active-text-color="#ffd04b" style="min-width: 1200px;border: 0px;">
-      <el-menu-item v-for="(item, i) in navList" :key="i" :index="item.name">
+  <div>
+    <el-menu
+      :default-active="currentPath"
+      router
+      mode="horizontal"
+      background-color="white"
+      text-color="#222"
+      active-text-color="red"
+      style="min-width: 1300px">
+      <el-menu-item v-for="(item,i) in navList" :key="i" :index="item.name">
         {{ item.navItem }}
       </el-menu-item>
-      <a href="#nowhere" style="color: whitesmoke;float: right;padding: 20px;">Else</a>
-      <span style="position: absolute;padding-top: 20px;right: 43%;font-size: 20px;font-weight: bold"><Title>User_Data</Title></span>
+      <span style="position: absolute;padding-top: 20px;right: 43%;font-size: 20px;font-weight: bold"></span>
+      <el-input
+        placeholder="快速搜索..."
+        prefix-icon="el-icon-search"
+        size="medium"
+        style="width: 300px;position:absolute;margin-top: 12px;right: 18%"
+        v-model="keywords">
+      </el-input>
     </el-menu>
-  </body>
+  </div>
 </template>
- 
-<script>
-export default {
-  beforeRouteEnter(to, from, next) {
-    // 添加背景色 margin:0;padding:0是为了解决vue四周有白边的问题
-    document.querySelector('body').setAttribute('style', 'margin:0;padding:0')
-    next()
-  },
 
-  name: 'NavMenu',
-  data() {
-    return {
-      navList: [
-        { name: '/index', navItem: '首页' },
-        { name: '/flask', navItem: 'Flask' },
-        { name: '/library', navItem: '数据库' },
-        // { name: '/admin', navItem: 'Query' },
-        // { name: '/test', navItem: '测试数据' }
-      ]
+<script>
+  export default {
+    name: 'NavMenu',
+    data () {
+      return {
+        navList: [
+          {name: '/index', navItem: '首页'},
+          {name: '/jotter', navItem: '笔记本'},
+          {name: '/library', navItem: '图书馆'},
+          {name: '/login', navItem: '管理中心'}
+        ],
+        keywords: ''
+      }
+    },
+    computed: {
+      hoverBackground () {
+        return '#ffd04b'
+      },
+      currentPath () {
+        var x = this.$route.path.indexOf('/', 1)
+        if (x !== -1) {
+          return this.$route.path.substring(0, x)
+        } else {
+          return this.$route.path
+        }
+      }
     }
   }
-}
 </script>
 
 <style scoped>
-#poster {
-  background: url("../../assets/1.jpg");
-  background-position: center;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  position: fixed;
-}
+  a{
+    text-decoration: none;
+  }
 
-body {
-  margin: 0px;
-  border: 0px;
-  padding: 0px;
-  /* margin: 边缘空白 */
-}
+  span {
+    pointer-events: none;
+  }
 
-a {
-  text-decoration: none;
-}
-
-span {
-  pointer-events: none;
-}
 </style>

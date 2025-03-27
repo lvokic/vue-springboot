@@ -10,7 +10,6 @@
 <script>
 import SideMenu from './SideMenu.vue';
 export default {
-  
     name: 'AppIndex',
     components:{SideMenu}
 }

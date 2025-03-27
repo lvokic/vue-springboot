@@ -1,25 +1,20 @@
 <template>
-  <body>
-    <div>
-      <nav-menu />
-      <router-view />
-    </div>
-  </body>
+  <div>
+    <nav-menu class="nav-menu"></nav-menu>
+    <router-view/>
+  </div>
 </template>
- 
 <script>
-import NavMenu from './common/NavMenu'
-export default {
-  name: 'Home',
-  components: { NavMenu }
-}
+
+  import NavMenu from '@/components/common/NavMenu'
+  export default {
+    components: {NavMenu}
+  }
 </script>
- 
-<style scoped>
-  body {
-    margin: 0px;
-    padding: 0px;
+
+<style>
+  .nav-menu {
+    /*margin-bottom: 40px;*/
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
   }
 </style>
-  
-  
